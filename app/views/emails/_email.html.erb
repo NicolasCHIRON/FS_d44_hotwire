@@ -6,6 +6,7 @@
   <div class='col-lg-4 my-3'>
     <%= link_to 'afficher le mail', email_path(email), data: {turbo_frame: "show_email"}  %>
   </div>
+
   <div class='col-lg-2 my-3'>
     <% if email.read %>
       <p>Message lu</p>

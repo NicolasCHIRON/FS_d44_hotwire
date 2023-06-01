@@ -15,7 +15,7 @@
  */
 
 body {
-background-color: rgba(69, 85, 85, 0.404);
+background-color: rgba(155, 175, 175, 0.404);
 }
 
  .button_to {
@@ -41,5 +41,15 @@ background-color: rgba(69, 85, 85, 0.404);
 }
 
 .btn_prin {
+  text-align: center;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+h3 {
+  margin: 1%;
   text-align: center;
 }
