@@ -17,5 +17,16 @@
 
  .container {
   display: flex;
-
+  text-align: center;
  }
+
+ .button_to {
+  display: inline-block;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.card {
+  text-align: center;
+  border: none;
+}
