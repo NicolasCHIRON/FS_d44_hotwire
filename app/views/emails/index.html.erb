@@ -1,0 +1,26 @@
+<%= @emails.count %>
+
+
+
+  <%= button_to "Recevoir un email", emails_path, data: { turbo_frame: "new_email" } %>
+
+
+  <%= turbo_frame_tag "new_email" do %>
+    <div class="row">
+      <div id="email-list" class='col-lg-6'>
+        <% @emails.sort.reverse_each do |email| %>
+          <%= render 'email', email: email%>
+        <% end %>
+      </div>
+      <div class='show-email col-lg-6'>   
+      </div>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
