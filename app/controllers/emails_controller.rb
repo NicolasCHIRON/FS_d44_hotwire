@@ -5,12 +5,7 @@ class EmailsController < ApplicationController
 
   def create
     @email = Email.create!(object: Faker::Books::Lovecraft.word, body: Faker::Books::Lovecraft.paragraph, read: false)
-
-    respond_to do |format|
-      format.html do
-        redirect_to emails_path
-      end
-    end
+    redirect_to emails_path
   end
 
   def edit
@@ -29,12 +24,13 @@ class EmailsController < ApplicationController
   end
 
   def show
+    @emails = Email.all
     @email = Email.find(params[:id])
     @email.update(read: true)
     @email.save
     respond_to do |format|
-      format.html { redirect_to email_path(@email) }
-      format.js { }
+      format.turbo_stream
+      format.html
     end
   end
 end
