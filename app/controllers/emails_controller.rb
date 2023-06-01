@@ -13,7 +13,9 @@ class EmailsController < ApplicationController
   end
 
   def update
-
+    @emails = Email.all
+    @email = Email.find(params[:id])
+    @email.update(read: false)
   end
 
   def destroy
@@ -27,10 +29,5 @@ class EmailsController < ApplicationController
     @emails = Email.all
     @email = Email.find(params[:id])
     @email.update(read: true)
-    @email.save
-    respond_to do |format|
-      format.turbo_stream
-      format.html
-    end
   end
 end

@@ -1,11 +1,16 @@
-  <div class='row'>
-    <div class='col-lg-2 offset-md-2 my-3'>
-      <%= email.object %>
-    </div>
-    <div class='col-lg-4 my-3'>
-      <%= link_to 'afficher le mail', email_path(email), data: {turbo_frame: "show_email"}  %>
-    </div>
-    <div class='col-lg-2'>
-      <%= email.read %>
-    </div>
+
+<div class='row'>
+  <div class='col-lg-2 my-3'>
+    <%= email.object %>
   </div>
+  <div class='col-lg-4 my-3'>
+    <%= link_to 'afficher le mail', email_path(email), data: {turbo_frame: "show_email"}  %>
+  </div>
+  <div class='col-lg-2 my-3'>
+    <% if email.read %>
+      <p>Message lu</p>
+    <% else %>
+      <p>Message non lu</p>
+    <% end %>
+  </div>
+</div>

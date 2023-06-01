@@ -14,19 +14,32 @@
  *= require_self
  */
 
-
- .container {
-  display: flex;
-  text-align: center;
- }
+body {
+background-color: rgba(69, 85, 85, 0.404);
+}
 
  .button_to {
   display: inline-block;
   padding-left:10%;
   padding-right:10%;
+  text-align: center;
 }
 
 .card {
   text-align: center;
-  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: transparent;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(102, 97, 97),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  color: rgb(102, 97, 97);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_prin {
+  text-align: center;
 }

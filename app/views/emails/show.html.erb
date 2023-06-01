@@ -1,5 +1,6 @@
 <%= turbo_frame_tag "show_email" do %>
   <h1><%= @email.object %></h1></br>
-  <p><%= @email.body %></p>
-  <%= button_to "Supprimer", @email, method: :delete, data: {turbo_frame: "new_email"} %> <%= button_to "Marquer comme non lu" %>
+  <p><%= @email.body %></p></br></br>
+  <%= button_to "Supprimer", @email, method: :delete, data: {turbo_frame: "new_email"}, class:"btn btn-danger" %>
+  <%= button_to "Marquer comme non lu", @email, method: :put, class:"btn btn-primary" %>
 <% end %>
